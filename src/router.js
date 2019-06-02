@@ -9,6 +9,7 @@ import UserAdd from "./views/User/UserAdd.vue";
 import UserList from "./views/User/UserList.vue";
 import UserInfo from "./views/User/UserInfo.vue";
 import MintUi from "./views/MintUi.vue";
+import ElementUi from "./views/ElementUi.vue";
 
 Vue.use(Router)
 
@@ -49,7 +50,8 @@ export default new Router({
         }
       ]
     },
-    {path: "/mintui",name: "MintUi",meta:{keepAlive:false},component: MintUi}
+    {path: "/mintui",name: "MintUi",meta:{keepAlive:false},component: MintUi},
+    {path: "/elementui",name: "ElementUi",component: ElementUi}
 
 
 

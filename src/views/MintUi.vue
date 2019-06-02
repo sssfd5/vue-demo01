@@ -10,6 +10,10 @@
                 <mt-button @click.native="openBottomToast" size="large">自定义 Toast 位置</mt-button>
             </div>
         </div>
+        <br><br><br>
+        vuex测试值：{{this.$store.state.count}}
+        <br>
+        <button @click="incCount()">增加数量+</button>
     </div>
 </template>
 
@@ -40,6 +44,11 @@
                     message: '提示信息',
                     position: 'bottom'
                 });
+            },
+            incCount(){
+                //改变vuex store里面的数据
+                //this.$store.commit('incCount');   /*触发 mutations 改变 state里面的数据*/
+                this.$store.dispatch('incMutationsCount');   /*触发 actions里面的方法   */
             }
         }
     }
@@ -64,20 +73,4 @@
             };
         }
     }
-/*    @component-namespace page {
-        @component toast {
-            @descendent wrapper {
-                background-color: red;
-                padding: 0 20px;
-                !*!*<!--position: absolute 50% * * *;-->*!*!
-                width: 5px;
-                transform: translateY(-50%);
-                button:not(:last-child) {
-                    margin-bottom: 20px;
-                };
-            }
-        }
-    }*/
-
-
 </style>

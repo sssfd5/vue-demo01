@@ -5,7 +5,8 @@
       <router-link to="/news">News</router-link> |
       <router-link to="/sity">sity</router-link> |
       <router-link to="/user">user</router-link> |
-      <router-link to="/mintui">mintui</router-link>
+      <router-link to="/mintui">mintui</router-link> |
+      <router-link to="/elementui">elementui</router-link>
       <hr>
       <router-view></router-view>
     </div>
