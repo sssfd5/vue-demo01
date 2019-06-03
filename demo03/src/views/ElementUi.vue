@@ -22,13 +22,14 @@
                     slot="dateCell"
                     slot-scope="{date, data}">
                 <p :class="data.isSelected ? 'is-selected' : ''">
-<!--                    {{data.day}}}-->
-                        {{ data.day.split('-').slice(2).join('-') }} {{ data.isSelected ? '✔️' : ''}}
+                    <!--{{data.day}}}-->
+                    {{ data.day.split('-').slice(2).join('-') }} {{ data.isSelected ? '✔️' : ''}}
                 </p>
             </template>
         </el-calendar>
 
     </div>
+
 </template>
 
 <script>
